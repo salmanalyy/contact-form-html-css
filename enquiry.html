@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Enquiry Form</title>
+  <link rel="stylesheet" href="enquiry.css">
+</head>
+<body>
+  <div class="form-container">
+    <h1 class="sam">Online Enquiry</h1>
+    <form>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter your full name" required>
+
+      <label for="mobile">Mobile No.</label>
+      <input type="number" id="mobile" placeholder="10-digit number" maxlength="10" required pattern="[0-9{10}]">
+
+      <label for="category">Select Category</label>
+      <select id="category" required>
+        <option>--Select Category--</option>
+        <option value="student">Student</option>
+        <option value="professional">Professional</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="course">Course</label>
+      <select id="course" required>
+        <option >--Select Course--</option>
+        <option value="btech">B.Tech</option>
+        <option value="mca">MCA</option>
+        <option value="mba">MBA</option>
+        <option value="mba">BCA</option>
+        <option value="diploma">Diploma</option>
+      </select>
+
+      <label for="batch">Batch Time</label>
+      <select id="batch" required>
+        <option value="">--Select Batch Time--</option>
+        <option value="morning">Morning</option>
+        <option value="afternoon">Afternoon</option>
+        <option value="evening">Evening</option>
+      </select>
+
+      <div class="btn-group">
+        <button type="submit" class="btn" onclick="showalert()">Submit</button>
+        <button type="button" class="btn clear" onclick="clearForm()">Clear</button>
+        <button type="reset" class="btn reset" onclick="alert('Reset Successfully')">Reset</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function clearForm() {
+      alert('Form Clear Successfully')
+    }
+    function showalert() {
+      alert('Form Submitted Successfuly')
+    }
+  </script>
+</body>
+</html>
